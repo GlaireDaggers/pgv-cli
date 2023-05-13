@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Hazel Stagner"]
 description = "A CLI tool for encoding PGV video files"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT"
+repository = "https://github.com/GlaireDaggers/pgv-cli"
 
 [dependencies]
 clap = { version = "4.2.7", features = ["derive"] }
