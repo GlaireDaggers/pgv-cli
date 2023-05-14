@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'pgv-cli'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=pgv-cli",
+                    "--package=pgv-cli"
+                ],
+                "filter": {
+                    "name": "pgv-cli",
+                    "kind": "bin"
+                }
+            },
+            "args": [ "-i", "frames", "-n", "1", "-f", "30", "-a", "audio.wav", "-o", "tales_of_phantasia.pgv" ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'pgv-cli'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=pgv-cli",
+                    "--package=pgv-cli"
+                ],
+                "filter": {
+                    "name": "pgv-cli",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
