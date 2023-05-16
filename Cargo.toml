@@ -12,5 +12,5 @@ keywords = ["codec", "video", "av"]
 [dependencies]
 clap = { version = "4.2.7", features = ["derive"] }
 image = "0.24.6"
-pgv_rs = "0.1.2"
+pgv_rs = "0.1.7"
 wav = "1.0.0"
