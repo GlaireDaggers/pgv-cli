@@ -19,6 +19,7 @@ Options:
   -n <NUMFRAMES>
   -f <FPS>
   -a <AUDIOPATH>
+  -q <QUALITY>
   -o <OUTPATH>
   -h, --help          Print help
   -V, --version       Print version

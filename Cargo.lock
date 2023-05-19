@@ -545,7 +545,7 @@ checksum = "b7e5500299e16ebb147ae15a00a942af264cf3688f47923b8fc2cd5858f23ad3"
 
 [[package]]
 name = "pgv-cli"
-version = "0.1.2"
+version = "0.1.4"
 dependencies = [
  "clap",
  "image",
@@ -555,9 +555,9 @@ dependencies = [
 
 [[package]]
 name = "pgv_rs"
-version = "0.1.5"
+version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "56ac3653448f9dbb2e3a1be7b1d3808b825a4d4e941b3013e573162e4366d769"
+checksum = "8fefa9aa2968ead0365bb2b82563cc9d237260bf6b8d275ede8d537f68290a63"
 dependencies = [
  "byteorder",
  "lazy_static",

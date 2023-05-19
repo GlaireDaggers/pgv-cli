@@ -22,6 +22,9 @@ struct Args {
     #[arg(short = 'a')]
     audiopath: Option<String>,
 
+    #[arg(short = 'q')]
+    quality: Option<i32>,
+
     #[arg(short = 'o')]
     outpath: String,
 }
@@ -52,6 +55,18 @@ fn load_frame<Q: AsRef<Path>>(path: Q) -> VideoFrame {
 fn main() {
     let cli = Args::parse();
 
+    let q = match cli.quality {
+        None => 0,
+        Some(v) => {
+            if v < 0 || v > 8 {
+                println!("Quality must be between 0 and 8. Using default quality (0)");
+                0
+            } else {
+                v
+            }
+        }
+    };
+
     // read first image from path
     let frame0 = load_frame(format!("{}/001.png", cli.framepath));
 
@@ -66,7 +81,7 @@ fn main() {
         }
     };
 
-    let mut enc = Encoder::new(frame0.width, frame0.height, cli.fps, audio_header.sampling_rate, audio_header.channel_count as u32);
+    let mut enc = Encoder::new(frame0.width, frame0.height, cli.fps, q, audio_header.sampling_rate, audio_header.channel_count as u32);
 
     // encode frames
     enc.encode_iframe(&frame0);
