@@ -1,6 +1,12 @@
 # pgv-cli
 CLI tool for encoding PGV video files
 
+## Installation
+
+```
+cargo install pgv-cli
+```
+
 ## Usage
 
 Takes as input a folder containing named PNG files (as 001.png, 002.png, etc) and an optional WAV audio track, and produces an encoded PGV video file
